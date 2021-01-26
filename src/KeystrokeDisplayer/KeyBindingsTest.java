@@ -65,16 +65,16 @@ public class KeyBindingsTest {
 
         public TestPane() {
             setLayout(new GridBagLayout());
-            up = new JLabel("UP");
+            up = new JLabel("W");
             up.setBorder(EMPTY_BORDER);
 
-            down = new JLabel("DOWN");
+            down = new JLabel("S");
             down.setBorder(EMPTY_BORDER);
 
-            left = new JLabel("LEFT");
+            left = new JLabel("A");
             left.setBorder(EMPTY_BORDER);
 
-            right = new JLabel("RIGHT");
+            right = new JLabel("D");
             right.setBorder(EMPTY_BORDER);
 
             setLayout(new GridBagLayout());
