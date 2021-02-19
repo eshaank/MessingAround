@@ -6,7 +6,7 @@ public class PracticeInterview_pt1 {
 	public static void main(String[] args) {
 		// System.out.println(test.toString());
 		PracticeInterview_pt1 testFunc = new PracticeInterview_pt1();
-		testFunc.findWord(test, "abd");
+		testFunc.findWord(test, "z");
 	}
 
 	 boolean findWord(char[][] letters, String word) {
@@ -14,13 +14,11 @@ public class PracticeInterview_pt1 {
 		int match = 0;
 		for (int row = 0; row < letters.length; row++) {
 			for (int col = 0; col < letters.length; col++) {
-				if (letters[row][col] != word.charAt(0)) {
-					System.out.println("nope");
+				if (letters[row][col] == word.charAt(0)) {
+					System.out.println("yes");
 					return false;
 				} else {
-					if(letters[row][col] == word.charAt(0)) {
-						match += 1;
-					}
+					System.out.println("nope");
 				}
 
 			}
