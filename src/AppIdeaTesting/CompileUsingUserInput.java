@@ -32,11 +32,12 @@ import javax.tools.ToolProvider;
  * An example showing how to use the RuntimeCompiler utility class
  */
 public class CompileUsingUserInput {
-	// public static void main(String[] args) throws Exception {
-	// simpleExample();
-	// // twoClassExample();
-	// // useLoadedClassExample();
-	// }
+	public static void main(String[] args) throws Exception {
+		String input = JOptionPane.showInputDialog(null, "Enter Java code to be compiled");
+		simpleExample(input);
+		// twoClassExample();
+		// useLoadedClassExample();
+	}
 
 	/**
 	 * Simple example: Shows how to add and compile a class, and then invoke a
