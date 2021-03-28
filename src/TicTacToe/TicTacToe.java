@@ -5,10 +5,8 @@ import java.util.Scanner;
 public class TicTacToe {
 
     private char[][] mat;
-
     private char letter;
     private char[] gameArr;
-
     private char letterWon;
 
     public TicTacToe() {
@@ -22,15 +20,10 @@ public class TicTacToe {
     }
 
     public void loadGame(String game) {
-
         gameArr = new char[game.length()];
-
         for (int i = 0; i < game.length(); i++) {
-
             letter = game.charAt(i);
-
             gameArr[i] = letter;
-
         }
 
         // adding to 2d array
@@ -94,13 +87,8 @@ public class TicTacToe {
     }
 
     public String toString() {
-
         String output = "";
-
         output += getWinner();
-
-        // System.out.println(gameArr);
-
         return output + "\n\n";
 
     }
