@@ -4,94 +4,93 @@ import java.util.Scanner;
 
 public class TicTacToe {
 
-    private char[][] mat;
+	private char[][] mat;
 
-    private char letter;
+	private char letter;
+	private char[] gameArr;
 
-    private char[] gameArr;
+	private char letterWon;
 
-    private char letterWon;
+	public TicTacToe() {
 
-    public TicTacToe() {
+	}
 
-    }
+	public TicTacToe(String game) {
 
-    public TicTacToe(String game) {
+		loadGame(game);
 
-        loadGame(game);
+	}
 
-    }
+	public void loadGame(String game) {
 
-    public void loadGame(String game) {
+		gameArr = new char[game.length()];
 
-        gameArr = new char[game.length()];
+		for (int i = 0; i < game.length(); i++) {
 
-        for (int i = 0; i < game.length(); i++) {
+			letter = game.charAt(i);
 
-            letter = game.charAt(i);
+			gameArr[i] = letter;
 
-            gameArr[i] = letter;
+		}
 
-        }
+		// adding to 2d array
 
-        // adding to 2d array
+		mat = new char[3][3];
 
-        mat = new char[3][3];
+		int index = 0;
 
-        int index = 0;
+		for (int r = 0; r < 3; r++) {
 
-        for (int r = 0; r < 3; r++) {
+			for (int c = 0; c < 3; c++) {
 
-            for (int c = 0; c < 3; c++) {
+				if (index == gameArr.length) {
 
-                if (index == gameArr.length) {
+					break;
 
-                    break;
+				}
 
-                }
+				mat[r][c] = gameArr[r];
 
-                mat[r][c] = gameArr[r];
+				System.out.print(mat[r][c] + " ");
 
-                System.out.print(mat[r][c] + " ");
+				index++;
 
-                index++;
+			}
 
-            }
+			System.out.println();
 
-            System.out.println();
+		}
 
-        }
+	}
 
-    }
+	public String getWinner() {
 
-    public String getWinner() {
+		boolean hasWon = false;
 
-        boolean hasWon = false;
+		for (int r = 0; r < mat.length; r++) {
 
-        for (int r = 0; r < mat.length; r++) {
+			for (int c = 0; c < mat[0].length; c++) {
 
-            for (int c = 0; c < mat[0].length; c++) {
+			}
 
-            }
+		}
 
-        }
+		// return letterWon + " has won horizontally";
 
-        // return letterWon + " has won horizontally";
+		return "not won";
 
-        return "not won";
+	}
 
-    }
+	public String toString() {
 
-    public String toString() {
+		String output = "";
 
-        String output = "";
+		output += getWinner();
 
-        output += getWinner();
+		// System.out.println(gameArr);
 
-        // System.out.println(gameArr);
+		return output + "\n\n";
 
-        return output + "\n\n";
-
-    }
+	}
 
 }
