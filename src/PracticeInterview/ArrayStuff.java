@@ -4,11 +4,14 @@ import javax.swing.JOptionPane;
 
 public class ArrayStuff {
 	public static void main(String[] args) {
-		int row = 5;
-		int col = 5;
+		// int row = 5;
+		// int col = 5;
 
-		ArrayStuff test = new ArrayStuff();
-		test.arrayMaker(row, col);
+		// ArrayStuff test = new ArrayStuff();
+		// test.arrayMaker(row, col);
+		int max = Integer.MAX_VALUE + Integer.MAX_VALUE;
+		long longVal = 0x1a;
+		System.out.println(longVal);
 	}
 
 	void arrayMaker(int r, int c) {
